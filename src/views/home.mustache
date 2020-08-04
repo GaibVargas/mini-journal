@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="http://localhost:3333/styles/global.css">
+  <link rel="stylesheet" href="http://localhost:3333/styles/home.css">
+
+  <title>Home</title>
+</head>
+<body>
+  <header>
+    <h1>News</h1>
+    <div class="buttonContainer">
+      <button><a href="/login">Journalist</a></button>
+    </div>
+  </header>
+
+  <div id="content">
+    {{#news}}
+      <div class="new">
+        <h3>{{title}}</h3>
+        <div class="description">
+          <h5>Description: </h5>
+          <span>{{description}}</span>
+        </div>
+        <span class="author">{{author}}</span>
+        <span class="view_more"><a href="/detail?id={{id}}">View</a></span>
+      </div>
+    {{/news}}
+  </div>
+</body>
+</html>
